@@ -6,7 +6,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 
-from main_app.models import Remedies
+from main_app.models import Remedy
 
 class Home(LoginView):
   template_name = 'home.html'
