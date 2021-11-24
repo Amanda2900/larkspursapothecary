@@ -5,8 +5,7 @@ h1 {
 
 p {
   font-size: var(--font-l);
-  margin: 10px 20px;
-  width: 600px;
+  width: 100%;
 }
 
 a {

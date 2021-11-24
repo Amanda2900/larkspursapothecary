@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+</script>
+<link 
+  rel="stylesheet" 
+  type="text/css" 
+  href="{% static 'css/herb-detail.css' %}"
+/>
+{% endblock %}
+
+{% block content %}
+
+<section class="herb-container">
+  <div class="usr-img">
+    <img 
+      src="{% static 'images/'%}{{ herb.name }}.jpg" 
+      alt="{{ herb.name }}"
+      class="usr-img"
+    >
+  </div>
+  <div class="herb-details">
+    <h1>{{ remedy.name }}</h1>
+    <p>{{ remedy.type }}</p>
+    <p>{{ remedy.herbs }}</p>
+    <p>{{ remedy.description }}</p>
+  </div>
+</section>
+<section class="link-container">
+  <a href="{% url 'herbs_index' %}">Herb Index</a>
+</section>
+
+{% endblock %}
