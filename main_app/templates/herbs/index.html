@@ -14,7 +14,7 @@
 <section class="card-container">
   {% for herb in herbs %}
     <div class="card">
-      {% comment %} <a href="{% url 'herb_detail' herb.id %}"> {% endcomment %}
+      <a href="{% url 'herbs_detail' herb.id %}">
         <div class="card-content">
           <div class="card-img-container">
             <img

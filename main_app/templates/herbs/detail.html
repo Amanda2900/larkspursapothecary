@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+</script>
+<link 
+  rel="stylesheet" 
+  type="text/css" 
+  href="{% static 'css/herb-detail.css' %}"
+/>
+{% comment %} <script defer src="{% static 'js/pokemon-detail.js' %}"></script> {% endcomment %}
+{% endblock %}
+
+{% block content %}
+
+<section class="herb-container">
+  <div class="usr-img">
+    <img 
+      src="{% static 'images/'%}{{ herb.name }}.jpg" 
+      alt="{{ herb.name }}"
+      class="usr-img"
+    >
+  </div>
+  <div class="herb-details">
+    <h1>{{ herb.name }}</h1>
+    <p>{{ herb.info }}</p>
+    <p>{{ herb.uses }}</p>
+  </div>
+</section>
+<section class="link-container">
+  <a href="{% url 'herbs_index' %}">Herb Index</a>
+</section>
+
+{% endblock %}

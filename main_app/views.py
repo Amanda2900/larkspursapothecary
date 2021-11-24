@@ -24,6 +24,11 @@ def herbs_index(request):
   herbs = Herb.objects.all()
   return render(request, 'herbs/index.html', { 'herbs': herbs })
 
+@login_required
+def herbs_detail(request, herb_id):
+  herb = Herb.objects.get(id=herb_id)
+  return render(request, 'herbs/detail.html', { 'herb': herb })
+
 def signup(request):
   error_message = ''
   if request.method == 'POST':
