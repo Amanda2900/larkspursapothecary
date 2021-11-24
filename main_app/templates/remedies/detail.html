@@ -14,21 +14,40 @@
 
 <section class="herb-container">
   <div class="usr-img">
-    <img 
-      src="{% static 'images/'%}{{ herb.name }}.jpg" 
-      alt="{{ herb.name }}"
-      class="usr-img"
-    >
+    {% if remedy.type == "T" %}
+      <img
+        src="{% static 'images/potion.png' %}" 
+        alt="potion"
+        class="usr-img"
+      >
+    {% elif remedy.type == "P" %}
+      <img
+        src="{% static 'images/bandage.png' %}" 
+        alt="bandage"
+        class="usr-img"
+      >
+    {% else %}
+      <img
+        src="{% static 'images/pouch.png' %}" 
+        alt="pouch"
+        class="usr-img"
+      >
+    {% endif %}
   </div>
   <div class="herb-details">
     <h1>{{ remedy.name }}</h1>
-    <p>{{ remedy.type }}</p>
-    <p>{{ remedy.herbs }}</p>
+    <h2>Type:</h2>
+    <p>{{ remedy.get_type_display }}</p>
+    <h2>Herbs Needed:</h2>
+    {% for herb in remedy.herbs.all %}
+      <p>{{ herb.name }}</p>
+    {% endfor %}
+    <h2>Description:</h2>
     <p>{{ remedy.description }}</p>
   </div>
 </section>
 <section class="link-container">
-  <a href="{% url 'herbs_index' %}">Herb Index</a>
+  <a href="{% url 'remedies_index' %}">Remedy Index</a>
 </section>
 
 {% endblock %}

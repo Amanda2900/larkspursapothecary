@@ -15,16 +15,16 @@
 <section class="card-container">
   {% for remedy in remedies %}
     <div class="card">
-      <a href="{% url 'remedies_detail' remedy.id %}">
+      <a href="{% url 'remedy_detail' remedy.id %}">
         <div class="card-content">
           <div class="card-img-container">
-          {% if remedy.type == "tonic" %}
+          {% if remedy.type == "T" %}
             <img
               src="{% static 'images/potion.png' %}" 
               alt="potion"
               class="usr-img"
             >
-          {% elif remedy.type == "poultice" %}
+          {% elif remedy.type == "P" %}
             <img
               src="{% static 'images/bandage.png' %}" 
               alt="bandage"

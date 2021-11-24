@@ -28,6 +28,11 @@ def remedies_index(request):
   remedies = Remedy.objects.all()
   return render(request, 'remedies/index.html', { 'remedies': remedies })
 
+@login_required
+def remedy_detail(request, remedy_id):
+  remedy = Remedy.objects.get(id=remedy_id)
+  return render(request, 'remedies/detail.html', { 'remedy': remedy })
+
 class RemedyCreate(LoginRequiredMixin, CreateView):
   model = Remedy
   fields = ['name', 'herbs', 'type', 'description']
@@ -36,6 +41,10 @@ class RemedyCreate(LoginRequiredMixin, CreateView):
     form.instance.user = self.request.user 
     return super().form_valid(form)
 
+@login_required
+def assoc_Remedy(request, herb_id, remedy_id):
+  Remedy.objects.get(id=remedy_id).herbs.add(herb_id)
+  return redirect('remedy_detail', remedy_id=remedy_id)
 
 def signup(request):
   error_message = ''

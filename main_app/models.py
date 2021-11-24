@@ -26,6 +26,9 @@ class Herb(models.Model):
   def __str__(self):
     return self.name
 
+  class Meta:
+    ordering = ['name']
+
 
 class Remedy(models.Model):
   name = models.CharField(max_length=100)
@@ -43,4 +46,5 @@ class Remedy(models.Model):
 
   def get_absolute_url(self):
     return reverse('remedy_detail', kwargs={'remedy_id': self.id})
+
 
