@@ -122,7 +122,7 @@ STATIC_URL = '/static/'
 
 LOGIN_URL = 'home'
 
-LOGIN_REDIRECT_URL = 'about'
+LOGIN_REDIRECT_URL = 'herbs_index'
 
 LOGOUT_REDIRECT_URL = 'home'
 
