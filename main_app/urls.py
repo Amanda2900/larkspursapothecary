@@ -10,4 +10,5 @@ urlpatterns = [
   path('remedies/', views.remedies_index, name='remedies_index'),
   path('remedies/<int:remedy_id>/', views.remedy_detail, name='remedy_detail'),
   path('remedies/create/', views.RemedyCreate.as_view(), name='remedy_create'),
+  path('remedies/<int:pk>/update/', views.RemedyUpdate.as_view(), name='remedy_update'),
 ]

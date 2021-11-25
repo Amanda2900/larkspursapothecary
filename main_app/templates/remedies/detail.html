@@ -46,6 +46,10 @@
     {% endfor %}
     <h2>Description:</h2>
     <p>{{ remedy.description }}</p>
+    <div class="remedy-actions">
+      <a href="{% url 'remedy_update' remedy.id %}" class="btn warn">Edit</a>
+      {% comment %} <a href="{% url 'pokemon_delete' pokemon.id %}" class="btn danger">Delete</a> {% endcomment %}
+    </div>
   </div>
 </section>
 <section class="link-container">

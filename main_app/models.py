@@ -23,9 +23,11 @@ class Herb(models.Model):
   info = models.TextField(max_length=250)
   uses = models.TextField(max_length=500)
 
+  # creates an easy way to refer to the elements in the db
   def __str__(self):
     return self.name
 
+  # alphabetizes the herb list
   class Meta:
     ordering = ['name']
 

@@ -41,6 +41,10 @@ class RemedyCreate(LoginRequiredMixin, CreateView):
     form.instance.user = self.request.user 
     return super().form_valid(form)
 
+class RemedyUpdate(LoginRequiredMixin, UpdateView):
+  model = Remedy
+  fields = ['name', 'herbs', 'type', 'description']
+
 @login_required
 def assoc_Remedy(request, herb_id, remedy_id):
   Remedy.objects.get(id=remedy_id).herbs.add(herb_id)
