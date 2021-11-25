@@ -40,7 +40,9 @@
     <p>{{ remedy.get_type_display }}</p>
     <h2>Herbs Needed:</h2>
     {% for herb in remedy.herbs.all %}
-      <p>{{ herb.name }}</p>
+      <a href="{% url 'herbs_detail' herb.id %}">
+        <p>{{ herb.name }}</p>
+      </a>
     {% endfor %}
     <h2>Description:</h2>
     <p>{{ remedy.description }}</p>
