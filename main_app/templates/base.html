@@ -31,6 +31,7 @@
           {% if user.is_authenticated %}
             <li><a href="{% url 'herbs_index' %}">Herbs</a></li>
             <li><a href="{% url 'remedies_index' %}">Remedies</a></li>
+            <li><a href="{% url 'myremedies' %}"> My Remedies</a></li>
             <li><a href="{% url 'about' %}">About</a></li>
             <li><a href="{% url 'logout' %}">Log out</a></li>
           {% else %}

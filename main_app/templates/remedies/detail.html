@@ -36,6 +36,8 @@
   </div>
   <div class="herb-details">
     <h1>{{ remedy.name }}</h1>
+    <h2>Created By:</h2>
+    <p>{{ remedy.user }}</p>
     <h2>Type:</h2>
     <p>{{ remedy.get_type_display }}</p>
     <h2>Herbs Needed:</h2>
@@ -46,10 +48,12 @@
     {% endfor %}
     <h2>Description:</h2>
     <p>{{ remedy.description }}</p>
-    <div class="remedy-actions">
-      <a href="{% url 'remedy_update' remedy.id %}" class="btn warn">Edit</a>
-      <a href="{% url 'remedy_delete' remedy.id %}" class="btn danger">Delete</a>
-    </div>
+    {% if user.username == remedy.user %}
+      <div class="remedy-actions">
+        <a href="{% url 'remedy_update' remedy.id %}" class="btn warn">Edit</a>
+        <a href="{% url 'remedy_delete' remedy.id %}" class="btn danger">Delete</a>
+      </div>
+    {% endif %}
   </div>
 </section>
 <section class="link-container">

@@ -33,6 +33,11 @@ def remedy_detail(request, remedy_id):
   remedy = Remedy.objects.get(id=remedy_id)
   return render(request, 'remedies/detail.html', { 'remedy': remedy })
 
+@login_required
+def myremedies(request):
+  remedies = Remedy.objects.filter(user=request.user)
+  return render(request, 'myremedies.html', { 'remedies': remedies })
+
 class RemedyCreate(LoginRequiredMixin, CreateView):
   model = Remedy
   fields = ['name', 'herbs', 'type', 'description']
