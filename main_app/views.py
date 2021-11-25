@@ -45,6 +45,10 @@ class RemedyUpdate(LoginRequiredMixin, UpdateView):
   model = Remedy
   fields = ['name', 'herbs', 'type', 'description']
 
+class RemedyDelete(LoginRequiredMixin, DeleteView):
+  model = Remedy
+  success_url = '/remedies/'
+
 @login_required
 def assoc_Remedy(request, herb_id, remedy_id):
   Remedy.objects.get(id=remedy_id).herbs.add(herb_id)
