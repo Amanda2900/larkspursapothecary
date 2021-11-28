@@ -6,13 +6,13 @@
 <link 
   rel="stylesheet" 
   type="text/css" 
-  href="{% static 'css/herb-detail.css' %}"
+  href="{% static 'css/remedy-detail.css' %}"
 />
 {% endblock %}
 
 {% block content %}
 
-<section class="herb-container">
+<section class="remedy-container">
   <div class="usr-img">
     {% if remedy.type == "T" %}
       <img
@@ -34,7 +34,7 @@
       >
     {% endif %}
   </div>
-  <div class="herb-details">
+  <div class="remedy-details">
     <h1>{{ remedy.name }}</h1>
     <h2>Created By:</h2>
     <p>{{ remedy.user }}</p>
@@ -48,9 +48,9 @@
     {% endfor %}
     <h2>Description:</h2>
     <p>{{ remedy.description }}</p>
-    {% if user.username == remedy.user %}
+    {% if user == remedy.user %}
       <div class="remedy-actions">
-        <a href="{% url 'remedy_update' remedy.id %}" class="btn warn">Edit</a>
+        <a href="{% url 'remedy_update' remedy.id %}" class="btn">Edit</a>
         <a href="{% url 'remedy_delete' remedy.id %}" class="btn danger">Delete</a>
       </div>
     {% endif %}

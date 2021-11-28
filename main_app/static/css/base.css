@@ -26,6 +26,7 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   min-height: 100vh;
+  background-color: rgb(231, 248, 223);
   --nav-bg: rgba(93, 177, 72, 0.7);
   --nav-bg-ff: rgba(139, 196, 82, 0.9);
   --borders: rgb(16, 105, 3) solid 2px;
@@ -88,8 +89,12 @@ nav li {
   padding: 5px 8px;
 }
 
+.logo-img {
+  width: 30%;
+}
+
 .usr-img {
-  width: 100%;
+  width: 120%;
 }
 
 .header-logo-container {
@@ -132,29 +137,24 @@ nav li {
   border-color: var(--secondary);
 }
 
-.warn {
-  color: var(--warn);
-  border-color: var(--warn);
-}
-
 .danger {
   color: var(--danger);
   border-color: var(--danger);
 }
 
-.page-header h1 {
+/* .page-header h1 {
   font-size: var(--font-xxl);
   margin: 0;
-}
+} */
 
-.page-header img {
+/* .page-header img {
   height: 20px;
   margin-left:15px;
 }
 
 .page-header img:first-of-type {
   margin-left: 20px;
-}
+} */
 
 @media only screen and (min-width: 768px) {
   header {
