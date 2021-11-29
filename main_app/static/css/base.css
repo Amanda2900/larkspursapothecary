@@ -22,9 +22,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Bodoni Moda', serif;
   min-height: 100vh;
   --body-bg: rgb(231, 248, 223);
   --nav-bg: rgba(2, 61, 9, 0.7);
@@ -85,7 +83,7 @@ nav li {
 }
 
 .dropdown .dropbtn {
-  font-weight: 600;
+  font-family: 'Bodoni Moda', serif;
   font-size: var(--font-l);
   outline: none;
   background-color: transparent;
