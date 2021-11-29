@@ -17,7 +17,7 @@
       <a href="{% url 'remedy_detail' remedy.id %}">
         <div class="card-content">
           <div class="card-img-container">
-            {% if cat.photo.url %}
+            {% if remedy.photo.url %}
               <img 
                 src="{{remedy.photo.url}}" 
                 alt="A photo of {{remedy.name}}"
@@ -45,7 +45,7 @@
               {% endif %}
             {% endif %}
           </div>
-          <h2 class="card-title">{{ remedy.name }}</h2>
+          <h2 class="card-title"><span>{{ remedy.name }}</span></h2>
         </div>
       </a>
     </div>

@@ -9,13 +9,13 @@ p {
   margin-left: 20px;
 }
 
-a {
+.herb-link {
   text-decoration: none;
   color: var(--text-color);
   font-size: var(--font-xl);
 }
 
-a:hover {
+.her-link:hover {
   border-bottom: 2px solid var(--button-bg);
 }
 
@@ -25,7 +25,6 @@ a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
 }
 
 .link-container {
