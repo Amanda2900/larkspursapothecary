@@ -20,15 +20,17 @@
 <body>
   <header>
     <div class="header-logo-container">
-      <a href="/" class="btn">Home</a>
+      <a href="/">
+        <img src="{% static 'images/logo-white.png' %}" alt="logo with Home text" class="logo-img"/>
+      </a>
     </div>
     <nav>
         <ul>
           {% if user.is_authenticated %}
-            <li><a href="{% url 'herbs_index' %}" class="btn">Herbs</a></li>
+            <li><a href="{% url 'herbs_index' %}" class="btn nav-btn">Herbs</a></li>
             <li>
               <div class="dropdown">
-                <button class="dropbtn">Remedies
+                <button class="dropbtn nav-btn">Remedies
                   <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
@@ -38,12 +40,12 @@
                 </div>
               </div>
             </li>
-            <li><a href="{% url 'about' %}" class="btn">About</a></li>
-            <li><a href="{% url 'logout' %}" class="btn">Log out</a></li>
+            <li><a href="{% url 'about' %}" class="btn nav-btn">About</a></li>
+            <li><a href="{% url 'logout' %}" class="btn nav-btn">Log out</a></li>
           {% else %}
-            <li><a href="{% url 'about' %}" class="btn">About</a></li>
-            <li><a href="{% url 'home' %}" class="btn">Login</a></li>
-            <li><a href="{% url 'signup' %}" class="btn">Sign Up</a></li>
+            <li><a href="{% url 'about' %}" class="btn nav-btn">About</a></li>
+            <li><a href="{% url 'home' %}" class="btn nav-btn">Login</a></li>
+            <li><a href="{% url 'signup' %}" class="btn nav-btn">Sign Up</a></li>
           {% endif %}
         </ul>
       </nav>

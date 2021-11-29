@@ -35,7 +35,6 @@ body {
   --button-bg: rgba(2, 61, 9, 0.9);
   --button-bg-hover: rgb(226, 226, 226);
   --submit: rgb(26, 128, 0);
-  --secondary: rgb(57, 57, 57);
   --card-box-shadow: 5px 5px 6px -1px #AAA;
   --font-xtreme: 4.2rem;
   --font-xxl: 3.6rem;
@@ -76,6 +75,7 @@ nav ul {
 
 nav li {
   padding: 5px 8px;
+
 }
 
 .dropdown {
@@ -86,17 +86,10 @@ nav li {
 .dropdown .dropbtn {
   font-weight: 600;
   font-size: var(--font-l);
-  border: none;
   outline: none;
-  padding: 8px 16px;
-  background-color: var(--button-bg);
+  background-color: transparent;
   margin: 0;
-  border-radius: var(--card-border-radius);
   color: var(--body-bg);
-  border-radius: 6px;
-  border-width: 2px;
-  border-style: solid;
-  border-color: var(--body-bg);
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
@@ -190,6 +183,12 @@ nav li {
   margin-left:15px;
 }
 
+.nav-btn {
+  border: none;
+  background-color: transparent;
+  padding: 2px;
+}
+
 @media only screen and (min-width: 768px) {
   header {
     position: sticky;
@@ -222,6 +221,31 @@ nav li {
 
   nav ul {
     flex-wrap: nowrap;
+  }
+
+  .nav-btn {
+    border-radius: 6px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--body-bg);
+    background-color: var(--button-bg);
+    padding: 8px 16px;
+  }
+
+  .dropdown .dropbtn {
+    font-weight: 600;
+    font-size: var(--font-l);
+    border: none;
+    outline: none;
+    padding: 8px 16px;
+    background-color: var(--button-bg);
+    margin: 0;
+    border-radius: var(--card-border-radius);
+    color: var(--body-bg);
+    border-radius: 6px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--body-bg);
   }
 
   .header-logo-container {

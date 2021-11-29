@@ -1,0 +1,10 @@
+h1 {
+  font-size: var(--font-xxl);
+  margin: 20px 0;
+  padding: 20px;
+}
+p {
+  font-size: var(--font-xl);
+  padding-top: 30px;
+  margin-left: 20px;
+}
