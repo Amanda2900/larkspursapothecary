@@ -3,8 +3,24 @@ h1 {
   margin: 20px 0;
   padding: 20px;
 }
+
+span {
+  border: var(--borders);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--card-box-shadow);
+  background-color: var(--body-bg);
+  padding: 10px;
+  margin: 20px;
+}
+
 .about-text {
   font-size: var(--font-xl);
   padding: 0 20px;
   margin-left: 40px;
+  border: var(--borders);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--card-box-shadow);
+  background-color: var(--body-bg);
+  padding: 20px;
+  margin: 20px;
 }

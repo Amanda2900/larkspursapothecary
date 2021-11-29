@@ -1,3 +1,12 @@
+h1 {
+  border: var(--borders);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--card-box-shadow);
+  background-color: var(--body-bg);
+  padding: 10px;
+  margin: 20px;
+}
+
 .card-container {
   padding: 0 30px;
   display: flex;
@@ -11,6 +20,7 @@
   border: var(--borders);
   border-radius: var(--card-border-radius);
   box-shadow: var(--card-box-shadow);
+  background-color: var(--body-bg);
 }
 
 .card-content {

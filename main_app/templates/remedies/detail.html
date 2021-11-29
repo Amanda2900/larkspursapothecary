@@ -69,10 +69,10 @@
           Choose photo
           <input type="file" name="photo-file" id="file-input">
         </label>
-        <button type="submit" class="btn">Upload Photo</button>
+        <button type="submit" class="btn ">Upload Photo</button>
       </form>
       <div class="remedy-actions">
-        <a href="{% url 'remedy_update' remedy.id %}" class="btn">Edit</a>
+        <a href="{% url 'remedy_update' remedy.id %}" class="btn action-btn">Edit</a>
         <a href="{% url 'remedy_delete' remedy.id %}" class="btn">Delete</a>
       </div>
     {% endif %}

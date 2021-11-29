@@ -19,6 +19,15 @@ span:hover {
   font-size: var(--font-xl);
 }
 
+.remedy-details {
+  border: var(--borders);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--card-box-shadow);
+  background-color: var(--body-bg);
+  padding: 20px;
+  margin: 20px;
+}
+
 .remedy-container {
   padding: 35px 30px;
   display: flex;
@@ -33,7 +42,6 @@ span:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 30px;
 }
 
 .remedy-actions {
@@ -50,6 +58,16 @@ span:hover {
 .pic {
   border-radius: var(--card-border-radius);
   box-shadow: var(--card-box-shadow);
+  width: 80%;
+  margin-left: 0;
+}
+
+.btn {
+  margin: 10px;
+}
+
+.action-btn {
+  margin-left: 30%;
 }
 
 #file-input {

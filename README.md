@@ -6,4 +6,4 @@ remedy icons: <div>Icons made by <a href="https://www.freepik.com" title="Freepi
 
 <a href="https://www.freepik.com/vectors/background">Background vector created by rawpixel.com - www.freepik.com</a>
 
-Button Shine: https://codepen.io/bholmesdev/pen/RwobPJG
+flower bg: <a href='https://www.freepik.com/vectors/background'>Background vector created by coolvector - www.freepik.com</a>

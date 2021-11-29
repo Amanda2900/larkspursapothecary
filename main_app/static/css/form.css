@@ -4,10 +4,25 @@
   width: 100%;
 }
 
+h1{
+  border: var(--borders);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--card-box-shadow);
+  background-color: var(--body-bg);
+  padding: 10px;
+  margin: 20px;
+}
+
 table {
   padding: 0 40px;
   width: 100%;
   border-spacing: 0 20px;
+  border: var(--borders);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--card-box-shadow);
+  background-color: var(--body-bg);
+  padding: 20px;
+  margin: 20px;
 }
 
 th {
