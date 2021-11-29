@@ -13,4 +13,5 @@ urlpatterns = [
   path('remedies/create/', views.RemedyCreate.as_view(), name='remedy_create'),
   path('remedies/<int:pk>/update/', views.RemedyUpdate.as_view(), name='remedy_update'),
   path('remedies/<int:pk>/delete/', views.RemedyDelete.as_view(), name='remedy_delete'),
+  path('remedies/<int:remedy_id>/add_photo/', views.add_photo, name='add_photo'),
 ]

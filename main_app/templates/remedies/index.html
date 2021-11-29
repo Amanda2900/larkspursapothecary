@@ -17,25 +17,33 @@
       <a href="{% url 'remedy_detail' remedy.id %}">
         <div class="card-content">
           <div class="card-img-container">
-          {% if remedy.type == "T" %}
-            <img
-              src="{% static 'images/potion.png' %}" 
-              alt="potion"
-              class="usr-img"
-            >
-          {% elif remedy.type == "P" %}
-            <img
-              src="{% static 'images/bandage.png' %}" 
-              alt="bandage"
-              class="usr-img"
-            >
-          {% else %}
-            <img
-              src="{% static 'images/pouch.png' %}" 
-              alt="pouch"
-              class="usr-img"
-            >
-          {% endif %}
+            {% if cat.photo.url %}
+              <img 
+                src="{{remedy.photo.url}}" 
+                alt="A photo of {{remedy.name}}"
+                class="usr-img"
+              >
+            {% else %}
+              {% if remedy.type == "T" %}
+                <img
+                  src="{% static 'images/potion.png' %}" 
+                  alt="potion"
+                  class="usr-img"
+                >
+              {% elif remedy.type == "P" %}
+                <img
+                  src="{% static 'images/bandage.png' %}" 
+                  alt="bandage"
+                  class="usr-img"
+                >
+              {% else %}
+                <img
+                  src="{% static 'images/pouch.png' %}" 
+                  alt="pouch"
+                  class="usr-img"
+                >
+              {% endif %}
+            {% endif %}
           </div>
           <h2 class="card-title">{{ remedy.name }}</h2>
         </div>

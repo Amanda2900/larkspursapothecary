@@ -41,6 +41,21 @@ a:hover {
   width: 60%;
 }
 
+.cat-details h3 {
+  margin: 16px 0 10px 0;
+}
+
+#file-input {
+  overflow: hidden;
+  position: absolute;
+  width: .1px;
+  height: .1px;
+}
+
+#file-name {
+  margin-bottom: 10px;
+}
+
 @media only screen and (min-width: 768px) {
   .remedy-container {
     padding: 35px 30px;

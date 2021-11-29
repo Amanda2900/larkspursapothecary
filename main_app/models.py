@@ -49,4 +49,11 @@ class Remedy(models.Model):
   def get_absolute_url(self):
     return reverse('remedy_detail', kwargs={'remedy_id': self.id})
 
+class Photo(models.Model):
+  url = models.CharField(max_length=250)
+  remedy = models.OneToOneField(Remedy, on_delete=models.CASCADE)
+
+  def __str__(self):
+    return f"Photo for remedy_id: {self.remedy_id} @{self.url}"
+
 

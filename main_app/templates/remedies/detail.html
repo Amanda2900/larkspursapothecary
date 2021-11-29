@@ -7,30 +7,39 @@
   type="text/css" 
   href="{% static 'css/remedy-detail.css' %}"
 />
+<script defer src="{% static 'js/add-photo.js' %}"></script>
 {% endblock %}
 
 {% block content %}
 
 <section class="remedy-container">
   <div class="usr-img">
-    {% if remedy.type == "T" %}
-      <img
-        src="{% static 'images/potion.png' %}" 
-        alt="potion"
-        class="usr-img"
-      >
-    {% elif remedy.type == "P" %}
-      <img
-        src="{% static 'images/bandage.png' %}" 
-        alt="bandage"
+    {% if remedy.photo.url %}
+      <img 
+        src="{{remedy.photo.url}}" 
+        alt="A photo of {{remedy.name}}"
         class="usr-img"
       >
     {% else %}
-      <img
-        src="{% static 'images/pouch.png' %}" 
-        alt="pouch"
-        class="usr-img"
-      >
+      {% if remedy.type == "T" %}
+        <img
+          src="{% static 'images/potion.png' %}" 
+          alt="potion"
+          class="usr-img"
+        >
+      {% elif remedy.type == "P" %}
+        <img
+          src="{% static 'images/bandage.png' %}" 
+          alt="bandage"
+          class="usr-img"
+        >
+      {% else %}
+        <img
+          src="{% static 'images/pouch.png' %}" 
+          alt="pouch"
+          class="usr-img"
+        >
+      {% endif %}
     {% endif %}
   </div>
   <div class="remedy-details">
@@ -47,6 +56,20 @@
     {% endfor %}
     <h2>Description:</h2>
     <p>{{ remedy.description }}</p>
+    <h3>Change {{ remedy.name }}'s photo</h3>
+    <p id="file-name"></p>
+    <form 
+      action="{% url 'add_photo' remedy.id %}"
+      enctype="multipart/form-data"
+      method="POST"
+    >
+      {% csrf_token %}
+      <label class="btn">
+        Choose photo
+        <input type="file" name="photo-file" id="file-input">
+      </label>
+      <button type="submit" class="btn">Upload Photo</button>
+    </form>
     {% if user == remedy.user %}
       <div class="remedy-actions">
         <a href="{% url 'remedy_update' remedy.id %}" class="btn shiny">Edit</a>

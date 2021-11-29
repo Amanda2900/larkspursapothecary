@@ -6,7 +6,12 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
-from main_app.models import Herb, Remedy
+from main_app.models import Herb, Remedy, Photo
+import uuid
+import boto3
+
+S3_BASE_URL = 'https://s3.us-east-1.amazonaws.com/'
+BUCKET = 'larkspurs-apothecary'
 
 class Home(LoginView):
   template_name = 'home.html'
@@ -72,3 +77,21 @@ def signup(request):
   form = UserCreationForm()
   context = {'form': form, 'error_message': error_message}
   return render(request, 'signup.html', context)
+
+def add_photo(request, remedy_id):
+  photo_file = request.FILES.get('photo-file', None)
+  if photo_file:
+    s3 = boto3.client('s3')
+    key = uuid.uuid4().hex + photo_file.name[photo_file.name.rfind('.'):]
+    try:
+      s3.upload_fileobj(photo_file, BUCKET, key)
+      url = f"{S3_BASE_URL}{BUCKET}/{key}"
+      photo = Photo(url=url, remedy_id=remedy_id)
+      # Remove old photo if it exists
+      remedy_photo = Photo.objects.filter(remedy_id=remedy_id)
+      if remedy_photo.first():
+        remedy_photo.first().delete()
+      photo.save()
+    except Exception as err:
+      print('An error occurred uploading file to S3: %s' % err)
+  return redirect('remedy_detail', remedy_id=remedy_id)
