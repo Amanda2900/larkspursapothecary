@@ -2,7 +2,6 @@
 {% load static %}
 
 {% block head %}
-</script>
 <link 
   rel="stylesheet" 
   type="text/css" 
@@ -50,14 +49,14 @@
     <p>{{ remedy.description }}</p>
     {% if user == remedy.user %}
       <div class="remedy-actions">
-        <a href="{% url 'remedy_update' remedy.id %}" class="btn">Edit</a>
-        <a href="{% url 'remedy_delete' remedy.id %}" class="btn danger">Delete</a>
+        <a href="{% url 'remedy_update' remedy.id %}" class="btn shiny">Edit</a>
+        <a href="{% url 'remedy_delete' remedy.id %}" class="btn shiny">Delete</a>
       </div>
     {% endif %}
   </div>
 </section>
 <section class="link-container">
-  <a href="{% url 'remedies_index' %}">Remedy Index</a>
+  <a href="{% url 'remedies_index' %}" class="btn shiny">Remedy Index</a>
 </section>
 
 {% endblock %}

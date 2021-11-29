@@ -33,7 +33,6 @@ td > textarea {
   font-family: inherit;
 }
 
-.btn {
+.submit {
   align-self: flex-end;
-  margin-right: 40px;
 }

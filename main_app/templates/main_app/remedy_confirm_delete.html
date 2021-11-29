@@ -13,11 +13,11 @@
   {% csrf_token %}
   <a 
     href="{% url 'remedy_detail' remedy.id %}" 
-    class="btn secondary"
+    class="btn"
   >
     Cancel
   </a>
-  <button type="submit" class="btn danger">Yes - Delete!</button>
+  <button type="submit" class="btn">Yes - Delete!</button>
 </form>
 
 {% endblock %}

@@ -12,6 +12,7 @@
     href="{% static 'images/thyme.png' %}"
   >
   <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+  <script defer src=""></script>
   <title>Larkspur's Apothecary</title>
   {% block head %}
   {% endblock %}
@@ -19,18 +20,12 @@
 <body>
   <header>
     <div class="header-logo-container">
-      <a href="/">
-        <img 
-          src="{% static 'images/mini-logo.png' %}" 
-          alt="wreath logo"
-          class="logo-img"
-        >
-      </a>
+      <a href="/" class="btn">Home</a>
     </div>
     <nav>
         <ul>
           {% if user.is_authenticated %}
-            <li><a href="{% url 'herbs_index' %}">Herbs</a></li>
+            <li><a href="{% url 'herbs_index' %}" class="btn">Herbs</a></li>
             <li>
               <div class="dropdown">
                 <button class="dropbtn">Remedies
@@ -43,12 +38,12 @@
                 </div>
               </div>
             </li>
-            <li><a href="{% url 'about' %}">About</a></li>
-            <li><a href="{% url 'logout' %}">Log out</a></li>
+            <li><a href="{% url 'about' %}" class="btn">About</a></li>
+            <li><a href="{% url 'logout' %}" class="btn">Log out</a></li>
           {% else %}
-            <li><a href="{% url 'about' %}">About</a></li>
-            <li><a href="{% url 'home' %}">Login</a></li>
-            <li><a href="{% url 'signup' %}">Sign Up</a></li>
+            <li><a href="{% url 'about' %}" class="btn">About</a></li>
+            <li><a href="{% url 'home' %}" class="btn">Login</a></li>
+            <li><a href="{% url 'signup' %}" class="btn">Sign Up</a></li>
           {% endif %}
         </ul>
       </nav>
