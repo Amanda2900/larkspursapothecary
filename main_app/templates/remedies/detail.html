@@ -57,7 +57,7 @@
     <h2>Description:</h2>
     <p>{{ remedy.description }}</p>
     {% if user == remedy.user %}
-      <h3>Change {{ remedy.name }}'s photo</h3>
+      <h2>Change photo:</h2>
       <p id="file-name"></p>
       <form 
         action="{% url 'add_photo' remedy.id %}"

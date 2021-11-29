@@ -30,7 +30,7 @@ body {
   --nav-bg: rgba(2, 61, 9, 0.7);
   --nav-bg-ff: rgba(2, 61, 9, 0.9);
   --borders: rgb(2, 61, 9) solid 2px;
-  --text-color: rgb(17, 20, 17);
+  --text-color: rgb(2, 61, 9);
   --link-hover-color: rgb(6, 65, 3);
   --button-bg: rgba(2, 61, 9, 0.9);
   --button-bg-hover: rgb(226, 226, 226);
@@ -43,6 +43,7 @@ body {
   --font-reg: 1.6rem;
   --card-border-radius: 6px;
   background-color: var(--body-bg);
+  color: var(--text-color);
 }
 
 header {
