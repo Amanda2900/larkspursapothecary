@@ -32,9 +32,14 @@
   margin-top: 20px;
   text-align: center;
   font-size: var(--font-xl);
+  padding: 5px;
 }
 
 .card p {
   margin: 5px 0;
   font-size: var(--font-reg);
+}
+
+span:hover { 
+  border-bottom: 2px solid var(--button-bg);
 }
