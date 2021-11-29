@@ -9,14 +9,14 @@ p {
   margin-left: 20px;
 }
 
+span:hover {
+  border-bottom: 2px solid var(--button-bg);
+}
+
 .herb-link {
   text-decoration: none;
   color: var(--text-color);
   font-size: var(--font-xl);
-}
-
-.her-link:hover {
-  border-bottom: 2px solid var(--button-bg);
 }
 
 .remedy-container {
@@ -44,6 +44,12 @@ p {
 
 .usr-img {
   width: 60%;
+  margin-left: 50px;
+}
+
+.pic {
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--card-box-shadow);
 }
 
 #file-input {

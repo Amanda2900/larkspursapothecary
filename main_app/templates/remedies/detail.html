@@ -18,7 +18,7 @@
       <img 
         src="{{remedy.photo.url}}" 
         alt="A photo of {{remedy.name}}"
-        class="usr-img"
+        class="usr-img pic"
       >
     {% else %}
       {% if remedy.type == "T" %}
@@ -51,7 +51,7 @@
     <h2>Herbs Needed:</h2>
     {% for herb in remedy.herbs.all %}
       <a href="{% url 'herbs_detail' herb.id %}" class="herb-link">
-        <p>{{ herb.name }}</p>
+        <p><span>{{ herb.name }}</span></p>
       </a>
     {% endfor %}
     <h2>Description:</h2>
