@@ -56,24 +56,24 @@
     {% endfor %}
     <h2>Description:</h2>
     <p>{{ remedy.description }}</p>
-    <h3>Change {{ remedy.name }}'s photo</h3>
-    <p id="file-name"></p>
-    <form 
-      action="{% url 'add_photo' remedy.id %}"
-      enctype="multipart/form-data"
-      method="POST"
-    >
-      {% csrf_token %}
-      <label class="btn">
-        Choose photo
-        <input type="file" name="photo-file" id="file-input">
-      </label>
-      <button type="submit" class="btn">Upload Photo</button>
-    </form>
     {% if user == remedy.user %}
+      <h3>Change {{ remedy.name }}'s photo</h3>
+      <p id="file-name"></p>
+      <form 
+        action="{% url 'add_photo' remedy.id %}"
+        enctype="multipart/form-data"
+        method="POST"
+      >
+        {% csrf_token %}
+        <label class="btn">
+          Choose photo
+          <input type="file" name="photo-file" id="file-input">
+        </label>
+        <button type="submit" class="btn">Upload Photo</button>
+      </form>
       <div class="remedy-actions">
-        <a href="{% url 'remedy_update' remedy.id %}" class="btn shiny">Edit</a>
-        <a href="{% url 'remedy_delete' remedy.id %}" class="btn shiny">Delete</a>
+        <a href="{% url 'remedy_update' remedy.id %}" class="btn">Edit</a>
+        <a href="{% url 'remedy_delete' remedy.id %}" class="btn">Delete</a>
       </div>
     {% endif %}
   </div>
