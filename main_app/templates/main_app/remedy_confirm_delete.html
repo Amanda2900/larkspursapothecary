@@ -7,8 +7,8 @@
 
 {% block content %}
 
-<div class="page-header delete-header">
-  <h1><span>Are you sure you want to delete {{ object.name }}?</span></h1>
+<div class="page-header">
+  <h1><span>Delete {{ object.name }}?</span></h1>
 </div>
   <form action="" method="POST" class="form">
     {% csrf_token %}
@@ -18,6 +18,6 @@
     >
       Cancel
     </a>
-    <button type="submit" class="btn">Yes, Delete!</button>
+    <button type="submit" class="btn">Yes - Delete!</button>
   </form>
 {% endblock %}

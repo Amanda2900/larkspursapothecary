@@ -4,6 +4,5 @@ span {
   box-shadow: var(--card-box-shadow);
   background-color: var(--body-bg);
   padding: 10px;
-  margin: 20px;
+  margin: 10px;
 }
-
