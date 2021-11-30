@@ -34,7 +34,7 @@ class Herb(models.Model):
 
 class Remedy(models.Model):
   name = models.CharField(max_length=100)
-  herbs = models.ManyToManyField(Herb)
+  herbs = models.ManyToManyField(Herb, help_text="Hold down “Control”, or “Command” on a Mac, to select more than one.")
   type = models.CharField(
     max_length=1,
     choices=TYPES,
