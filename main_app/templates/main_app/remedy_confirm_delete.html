@@ -1,22 +1,23 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}"/>
+{% endblock %}
+
 {% block content %}
 
-<div class="page-header">
-  <h1>Delete this remedy?</h1>
+<div class="page-header delete-header">
+  <h1><span>Are you sure you want to delete {{ object.name }}?</span></h1>
 </div>
-<h2>Are you sure you want to delete {{ object.name }}?</h2>
-
-<form action="" method="POST" class="form">
-  {% csrf_token %}
-  <a 
-    href="{% url 'remedy_detail' remedy.id %}" 
-    class="btn"
-  >
-    Cancel
-  </a>
-  <button type="submit" class="btn">Yes, Delete!</button>
-</form>
-
+  <form action="" method="POST" class="form">
+    {% csrf_token %}
+    <a 
+      href="{% url 'remedy_detail' remedy.id %}" 
+      class="btn"
+    >
+      Cancel
+    </a>
+    <button type="submit" class="btn">Yes, Delete!</button>
+  </form>
 {% endblock %}
