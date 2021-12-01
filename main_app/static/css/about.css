@@ -1,10 +1,4 @@
 h1 {
-  font-size: var(--font-xxl);
-  margin: 20px 0;
-  padding: 20px;
-}
-
-span {
   border: var(--borders);
   border-radius: var(--card-border-radius);
   box-shadow: var(--card-box-shadow);
