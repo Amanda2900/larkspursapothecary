@@ -26,6 +26,7 @@ span:hover {
   background-color: var(--body-bg);
   padding: 20px;
   margin: 20px;
+  width: 100%;
 }
 
 .remedy-container {
