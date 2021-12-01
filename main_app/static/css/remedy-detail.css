@@ -48,11 +48,12 @@ span:hover {
   padding-top: 30px;
   margin-top: 30px;
   border-top: 2px solid var(--button-bg);
+  display: flex;
 }
 
 .usr-img {
   width: 60%;
-  margin-left: 50px;
+  margin-left: 30px;
 }
 
 .pic {
@@ -64,10 +65,6 @@ span:hover {
 
 .btn {
   margin: 10px;
-}
-
-.action-btn {
-  margin-left: 30%;
 }
 
 #file-input {
