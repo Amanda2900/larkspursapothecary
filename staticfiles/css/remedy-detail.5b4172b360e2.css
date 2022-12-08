@@ -1,0 +1,89 @@
+h1 {
+  font-size: var(--font-xxl);
+  margin: 15px 0 3px;
+}
+
+p {
+  font-size: var(--font-l);
+  width: 100%;
+  margin-left: 20px;
+}
+
+span:hover {
+  border-bottom: 2px solid var(--button-bg);
+}
+
+.herb-link {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: var(--font-xl);
+}
+
+.remedy-details {
+  border: var(--borders);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--card-box-shadow);
+  background-color: var(--body-bg);
+  padding: 20px;
+  margin: 20px;
+  width: 100%;
+}
+
+.remedy-container {
+  padding: 35px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.link-container {
+  padding: 35px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.remedy-actions {
+  padding-top: 30px;
+  margin-top: 30px;
+  border-top: 2px solid var(--button-bg);
+  display: flex;
+}
+
+.usr-img {
+  width: 60%;
+  margin-left: 30px;
+}
+
+.pic {
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--card-box-shadow);
+  width: 80%;
+  margin-left: 0;
+}
+
+.btn {
+  margin: 10px;
+}
+
+#file-input {
+  overflow: hidden;
+  position: absolute;
+  width: .1px;
+  height: .1px;
+}
+
+#file-name {
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .remedy-container {
+    padding: 35px 30px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+  }
+}

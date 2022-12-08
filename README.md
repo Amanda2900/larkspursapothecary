@@ -4,7 +4,7 @@ I have always been interested in flowers and plants, but I am also a big fan of 
 <h2>To Use</h2>
 On Larkspur's Apothecary, you can browse through a list of herbs, click on them to find out more information (including its medicinal properties), and then use those herbs to create your own remedies to share with other users.
 
-The application is deployed <a href="https://larkspurs-apothecary.herokuapp.com/">here</a>.
+The application is deployed <a href="https://larkspurs-apothecary.fly.dev">here</a>.
 
 Click <a href="https://trello.com/b/CsgEzwu4/larkspurs-apothecary">here</a> to view my ERD and wireframe.
 
